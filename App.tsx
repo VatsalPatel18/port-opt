@@ -18,7 +18,7 @@ const App: React.FC = () => {
         return <ChatInterface portfolio={portfolio} />;
       case 'optimize':
       case 'invest': // Reusing component for simplicity in this demo
-        return <OptimizationTools portfolio={portfolio} />;
+        return <OptimizationTools portfolio={portfolio} onUpdatePortfolio={setPortfolio} />;
       default:
         return <Dashboard portfolio={portfolio} />;
     }
